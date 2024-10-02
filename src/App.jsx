@@ -1,12 +1,15 @@
-import {  Navbar } from "./components";
+import { Suspense } from "react";
+import {  Loader, Navbar } from "./components";
 import { Tables } from "./pages";
 const App = () => {
   return (
-    <div>
+    <>
       <Navbar />
+    <Suspense fallback={<Loader/>}>
       <Tables />
+    </Suspense>
+    </>
       
-    </div>
   );
 };
 
